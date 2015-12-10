@@ -85,12 +85,12 @@
         CGRect layerRect = [layer rectForMetadataOutputRectOfInterest:intertRect];
         
         
-        NSLog(@"%@,  %@",NSStringFromCGRect(intertRect),NSStringFromCGRect(layerRect));
+      //  NSLog(@"%@,  %@",NSStringFromCGRect(intertRect),NSStringFromCGRect(layerRect));
         
         
         [output setRectOfInterest:intertRect];
       //  output.rectOfInterest=CGRectMake(0.5,0,0.5, 1);
-        
+      
   
     
  

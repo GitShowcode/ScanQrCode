@@ -11,6 +11,7 @@
 @implementation QrCustomView
 - (void)drawRect:(CGRect)rect {
 
+    //-------中间透明
     CGSize screenSize =CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT);
     CGRect screenDrawRect =CGRectMake(0, 0, screenSize.width,screenSize.height);
     //改变透明区域大小
