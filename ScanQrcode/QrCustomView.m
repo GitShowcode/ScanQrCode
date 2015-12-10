@@ -13,16 +13,13 @@
 
     CGSize screenSize =CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT);
     CGRect screenDrawRect =CGRectMake(0, 0, screenSize.width,screenSize.height);
-
     //改变透明区域大小
-    float mywidth=SCREEN_WIDTH/2+20-100;
+    float mywidth=[ScanSetting getsetting].sizeX;
    //改变透明区域位置
-    CGRect clearDrawRect = CGRectMake((SCREEN_WIDTH-mywidth)/2.0,(SCREEN_HEIGHT-mywidth+64)/2.0-60,mywidth,mywidth);
+    CGRect clearDrawRect = CGRectMake((SCREEN_WIDTH-mywidth)/2.0,(SCREEN_HEIGHT-mywidth+64)/2.0-[ScanSetting getsetting].space,mywidth,mywidth);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     [self addScreenFillRect:ctx rect:screenDrawRect];
-    
     [self addCenterClearRect:ctx rect:clearDrawRect];
-    
 
 
 }

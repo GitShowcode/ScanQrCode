@@ -9,6 +9,7 @@
 #import "ScanQrViewController.h"
 #import "CreateQrViewController.h"
 #import "QrCustomView.h"
+#import "ScanSetting.h"
 @interface ScanQrViewController ()
 
 @end
@@ -75,9 +76,9 @@
         [self.view.layer addSublayer:layer];
         
         //设置 真实扫描区域
-        float mywidth=SCREEN_WIDTH/2+20-100;
+        float mywidth=[ScanSetting getsetting].sizeX;
 
-        CGRect rect = CGRectMake(SCREEN_WIDTH/2-mywidth/2.0,(SCREEN_HEIGHT-mywidth+64)/2.0-60 , mywidth, mywidth);
+        CGRect rect = CGRectMake(SCREEN_WIDTH/2-mywidth/2.0,(SCREEN_HEIGHT-mywidth+64)/2.0-[ScanSetting getsetting].space , mywidth, mywidth);
         CGRect intertRect = [layer metadataOutputRectOfInterestForRect:rect];
         CGRect layerRect = [layer rectForMetadataOutputRectOfInterest:intertRect];
         
