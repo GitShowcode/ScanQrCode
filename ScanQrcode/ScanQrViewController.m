@@ -115,9 +115,14 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     
-    [self scanQr];
     [super viewDidAppear:animated];
     
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [self scanQr];
+    [super viewWillAppear:animated];
+    
+
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -139,15 +144,7 @@
            }];
     
     
-    
-//    UIImage *srcImage = self.imageView.image;
-//    CIContext *context = [CIContext contextWithOptions:nil];
-//    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:context options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
-//    CIImage *image = [CIImage imageWithCGImage:srcImage.CGImage];
-//    NSArray *features = [detector featuresInImage:image];
-//    CIQRCodeFeature *feature = [features firstObject];
-//    
-//    NSString *result = feature.messageString;
+
     
 }
 #pragma mark-相册选取的delegate
@@ -155,8 +152,16 @@
 didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [picker dismissViewControllerAnimated:YES completion:NULL];
     UIImage *pickimage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self analyze:pickimage];
+    
+    
+    
+  
 
-    UIImage *srcImage = pickimage;
+}
+
+-(void)analyze:(UIImage *)aimage{
+    UIImage *srcImage = aimage;
     CIContext *context = [CIContext contextWithOptions:nil];
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:context options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
     CIImage *image = [CIImage imageWithCGImage:srcImage.CGImage];
@@ -169,12 +174,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"木有" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alertView show];    } else {
-        
-        
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:result delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alertView show];
-    }
-
+            
+            
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:result delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
 }
 /*
 #pragma mark - Navigation

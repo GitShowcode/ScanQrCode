@@ -57,6 +57,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601A1B731C1995DF00A07403 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				601A1B6D1C19523800A07403 /* ScanSetting.h */,
+				601A1B6E1C19523800A07403 /* ScanSetting.m */,
+				60B432811C16E894000C1F37 /* QrCustomView.h */,
+				60B432821C16E894000C1F37 /* QrCustomView.m */,
+				60B4327E1C16E394000C1F37 /* ScanQrViewController.h */,
+				60B4327F1C16E394000C1F37 /* ScanQrViewController.m */,
+			);
+			name = Scan;
+			sourceTree = "<group>";
+		};
+		601A1B741C1995E600A07403 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				601A1B751C1995FC00A07403 /* CreateQr */,
+				60B4327B1C16D2B9000C1F37 /* CreateQrViewController.h */,
+				60B4327C1C16D2B9000C1F37 /* CreateQrViewController.m */,
+			);
+			name = Create;
+			sourceTree = "<group>";
+		};
+		601A1B751C1995FC00A07403 /* CreateQr */ = {
+			isa = PBXGroup;
+			children = (
+				601A1B701C198C9C00A07403 /* CreateQrIMG.h */,
+				601A1B711C198C9C00A07403 /* CreateQrIMG.m */,
+			);
+			name = CreateQr;
+			sourceTree = "<group>";
+		};
 		60B432561C16CDE9000C1F37 = {
 			isa = PBXGroup;
 			children = (
@@ -77,20 +109,12 @@
 		60B432611C16CDE9000C1F37 /* ScanQrcode */ = {
 			isa = PBXGroup;
 			children = (
+				601A1B741C1995E600A07403 /* Create */,
+				601A1B731C1995DF00A07403 /* Scan */,
 				60B432651C16CDE9000C1F37 /* AppDelegate.h */,
 				60B432661C16CDE9000C1F37 /* AppDelegate.m */,
 				60B432681C16CDE9000C1F37 /* ViewController.h */,
 				60B432691C16CDE9000C1F37 /* ViewController.m */,
-				601A1B6D1C19523800A07403 /* ScanSetting.h */,
-				601A1B6E1C19523800A07403 /* ScanSetting.m */,
-				60B432811C16E894000C1F37 /* QrCustomView.h */,
-				60B432821C16E894000C1F37 /* QrCustomView.m */,
-				60B4327E1C16E394000C1F37 /* ScanQrViewController.h */,
-				60B4327F1C16E394000C1F37 /* ScanQrViewController.m */,
-				60B4327B1C16D2B9000C1F37 /* CreateQrViewController.h */,
-				60B4327C1C16D2B9000C1F37 /* CreateQrViewController.m */,
-				601A1B701C198C9C00A07403 /* CreateQrIMG.h */,
-				601A1B711C198C9C00A07403 /* CreateQrIMG.m */,
 				60B4326B1C16CDE9000C1F37 /* Main.storyboard */,
 				60B4326E1C16CDE9000C1F37 /* Assets.xcassets */,
 				60B432701C16CDE9000C1F37 /* LaunchScreen.storyboard */,
