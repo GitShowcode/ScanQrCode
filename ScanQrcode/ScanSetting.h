@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface ScanSetting : NSObject
-@property (nonatomic,assign)float sizeX;
-@property (nonatomic,assign)float space;
+@property (nonatomic,assign)float sizeX;//大小
+@property (nonatomic,assign)float space;//向下偏移
 
 +(ScanSetting *)getsetting;
 

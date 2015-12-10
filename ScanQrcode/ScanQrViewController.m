@@ -16,6 +16,8 @@
 
 @implementation ScanQrViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -129,11 +131,51 @@
 }
 
 -(void)create{
-    CreateQrViewController *VC=[[CreateQrViewController alloc] init];
-    [self.navigationController pushViewController:VC animated:YES];
+   UIImagePickerController *   imagePicker  = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+   [imagePicker.navigationBar setTintColor:[UIColor cyanColor]];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    [self presentViewController:imagePicker animated:YES completion:^{
+           }];
+    
+    
+    
+//    UIImage *srcImage = self.imageView.image;
+//    CIContext *context = [CIContext contextWithOptions:nil];
+//    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:context options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
+//    CIImage *image = [CIImage imageWithCGImage:srcImage.CGImage];
+//    NSArray *features = [detector featuresInImage:image];
+//    CIQRCodeFeature *feature = [features firstObject];
+//    
+//    NSString *result = feature.messageString;
     
 }
+#pragma mark-相册选取的delegate
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    UIImage *pickimage = [info objectForKey:UIImagePickerControllerOriginalImage];
 
+    UIImage *srcImage = pickimage;
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:context options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
+    CIImage *image = [CIImage imageWithCGImage:srcImage.CGImage];
+    NSArray *features = [detector featuresInImage:image];
+    CIQRCodeFeature *feature = [features firstObject];
+    
+    NSString *result = feature.messageString;
+    
+    if ([result isEqualToString:@""] || result.length == 0) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"木有" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];    } else {
+        
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:result delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+
+}
 /*
 #pragma mark - Navigation
 

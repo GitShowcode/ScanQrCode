@@ -11,10 +11,11 @@ static ScanSetting *setting = nil;
 @implementation ScanSetting
 
 +(ScanSetting *)getsetting{
+
+    //单例
     ScanSetting *setting = [[ScanSetting alloc] init];
     setting.sizeX=250;
     setting.space=60;
-    
     return setting;
     
     

@@ -41,9 +41,16 @@
     
     [btn1 addTarget:self action:@selector(pushscan) forControlEvents:UIControlEventTouchUpInside];
     
+    [btn2 addTarget:self action:@selector(pushcreate) forControlEvents:UIControlEventTouchUpInside];
+
     
     
     
+    
+}
+-(void)pushcreate{
+    CreateQrViewController *VC=[[CreateQrViewController alloc] init];
+    [self.navigationController pushViewController:VC animated:YES];
     
     
 }
