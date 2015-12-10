@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "QrCustomView.h"
+@interface ScanQrViewController : UIViewController<AVCaptureMetadataOutputObjectsDelegate,UIAlertViewDelegate>
 
-@interface ScanQrViewController : UIViewController
+
+@property (nonatomic,strong)AVCaptureSession * session;
+
 
 @end

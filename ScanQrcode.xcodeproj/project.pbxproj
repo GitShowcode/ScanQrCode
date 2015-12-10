@@ -13,6 +13,10 @@
 		60B4326D1C16CDE9000C1F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B4326B1C16CDE9000C1F37 /* Main.storyboard */; };
 		60B4326F1C16CDE9000C1F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60B4326E1C16CDE9000C1F37 /* Assets.xcassets */; };
 		60B432721C16CDE9000C1F37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B432701C16CDE9000C1F37 /* LaunchScreen.storyboard */; };
+		60B4327A1C16D013000C1F37 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B432791C16D013000C1F37 /* AVFoundation.framework */; };
+		60B4327D1C16D2B9000C1F37 /* CreateQrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B4327C1C16D2B9000C1F37 /* CreateQrViewController.m */; };
+		60B432801C16E394000C1F37 /* ScanQrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B4327F1C16E394000C1F37 /* ScanQrViewController.m */; };
+		60B432831C16E894000C1F37 /* QrCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B432821C16E894000C1F37 /* QrCustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		60B4326E1C16CDE9000C1F37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60B432711C16CDE9000C1F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60B432731C16CDE9000C1F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60B432791C16D013000C1F37 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		60B4327B1C16D2B9000C1F37 /* CreateQrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateQrViewController.h; sourceTree = "<group>"; };
+		60B4327C1C16D2B9000C1F37 /* CreateQrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateQrViewController.m; sourceTree = "<group>"; };
+		60B4327E1C16E394000C1F37 /* ScanQrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanQrViewController.h; sourceTree = "<group>"; };
+		60B4327F1C16E394000C1F37 /* ScanQrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanQrViewController.m; sourceTree = "<group>"; };
+		60B432811C16E894000C1F37 /* QrCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrCustomView.h; sourceTree = "<group>"; };
+		60B432821C16E894000C1F37 /* QrCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrCustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B4327A1C16D013000C1F37 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +54,7 @@
 		60B432561C16CDE9000C1F37 = {
 			isa = PBXGroup;
 			children = (
+				60B432791C16D013000C1F37 /* AVFoundation.framework */,
 				60B432611C16CDE9000C1F37 /* ScanQrcode */,
 				60B432601C16CDE9000C1F37 /* Products */,
 			);
@@ -62,6 +75,12 @@
 				60B432661C16CDE9000C1F37 /* AppDelegate.m */,
 				60B432681C16CDE9000C1F37 /* ViewController.h */,
 				60B432691C16CDE9000C1F37 /* ViewController.m */,
+				60B432811C16E894000C1F37 /* QrCustomView.h */,
+				60B432821C16E894000C1F37 /* QrCustomView.m */,
+				60B4327E1C16E394000C1F37 /* ScanQrViewController.h */,
+				60B4327F1C16E394000C1F37 /* ScanQrViewController.m */,
+				60B4327B1C16D2B9000C1F37 /* CreateQrViewController.h */,
+				60B4327C1C16D2B9000C1F37 /* CreateQrViewController.m */,
 				60B4326B1C16CDE9000C1F37 /* Main.storyboard */,
 				60B4326E1C16CDE9000C1F37 /* Assets.xcassets */,
 				60B432701C16CDE9000C1F37 /* LaunchScreen.storyboard */,
@@ -150,7 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				60B4326A1C16CDE9000C1F37 /* ViewController.m in Sources */,
+				60B432801C16E394000C1F37 /* ScanQrViewController.m in Sources */,
+				60B4327D1C16D2B9000C1F37 /* CreateQrViewController.m in Sources */,
 				60B432671C16CDE9000C1F37 /* AppDelegate.m in Sources */,
+				60B432831C16E894000C1F37 /* QrCustomView.m in Sources */,
 				60B432641C16CDE9000C1F37 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -262,6 +284,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScanQrcode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gencare.ScanQrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScanQrcode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gencare.ScanQrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
