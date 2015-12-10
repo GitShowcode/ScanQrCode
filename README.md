@@ -8,5 +8,10 @@ CreateQrIMG *IMG=[CreateQrIMG changeQr:@"这是一个二维码" andnewRect:CGRec
 
 2.扫描二维码支持相册选取（透明区域可以自定义）
 
+Demo
+
+![image](https://github.com/GitShowcode/ScanQrCode.git/master/screenshots/IMG_1534.PNG)
+![image](https://github.com/GitShowcode/ScanQrCode.git/master/screenshots/IMG_1535.PNG)
+
 
 
