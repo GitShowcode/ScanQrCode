@@ -67,9 +67,9 @@
         
         [self.session addInput:input];
         [self.session addOutput:output];
-        //设置扫码支持的编码格式(如下设置条形码和二维码兼容)
         output.metadataObjectTypes=@[AVMetadataObjectTypeQRCode];
-        //,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code
+        //设置扫码支持的编码格式(如下设置条形码和二维码兼容)
+        //AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code
         
         AVCaptureVideoPreviewLayer * layer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
         layer.frame=self.view.layer.bounds;
