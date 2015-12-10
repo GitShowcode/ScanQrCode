@@ -7,10 +7,10 @@
 //
 
 #import "CreateQrViewController.h"
-
+#import "CreateQrIMG.h"
 @interface CreateQrViewController ()
 {
-    UIView *qrimgView;
+    CreateQrIMG *qrimgView;
     UIView *bgView;
 
 }
@@ -52,15 +52,22 @@
     [self.view addSubview:bgView];
     
     
+    
+    
+//    CreateQrIMG *IMG=[CreateQrIMG changeQr:@"这是一个二维码" andnewRect:CGRectMake(SCREEN_WIDTH/2.0-120, 64, 240, 240)];
+//    [self.view addSubview:IMG];
+  
     [self creatQr:@"http://www.cnbeta.com/"];
     
     
     UIButton *btn= [self createButtonWithFrame:CGRectMake((SCREEN_WIDTH-150)/2, 240+100+50+64, 150, 45) Target:self Selector:@selector(changeQr) Image:@""];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn setTitle:@"切换二维码" forState:UIControlStateNormal];
-    
     btn.backgroundColor=[UIColor cyanColor];
     [self.view addSubview:btn];
+    
+    
+    
 
 }
 -(void)changeQr{
@@ -68,8 +75,8 @@
     
     
     [qrimgView removeFromSuperview];
-    
     NSString *str=[NSString stringWithFormat:@"%@---%d",[self dateToString:[NSDate date]],arc4random()%100];
+   
     [self creatQr:str];
     
     
@@ -77,33 +84,23 @@
 }
 /**创建二维码一*/
 -(void)creatQr:(NSString *)qrstr{
-    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"]; [filter setDefaults];
-    NSData *data = [qrstr dataUsingEncoding:NSUTF8StringEncoding];
-    [filter setValue:data forKey:@"inputMessage"];
-    CIImage *outputImage = [filter outputImage];
-    CIContext *context = [CIContext contextWithOptions:nil];
-    CGImageRef cgImage = [context createCGImage:outputImage fromRect:[outputImage extent]];
-    UIImage *image = [UIImage imageWithCGImage:cgImage scale:1. orientation:UIImageOrientationUp];
-    UIImage *resized = [self resizeImage:image withQuality:kCGInterpolationNone rate:10.0];
-    NSLog(@"%@",NSStringFromCGSize(resized.size));
+    [qrimgView removeFromSuperview];
     
-    qrimgView  =[[UIImageView alloc]initWithImage:resized]; qrimgView.frame = CGRectMake(0, 0, 240, 240);
-    for (UIView *iview in bgView.subviews) {
-        [iview removeFromSuperview];
-    }
-    qrimgView.userInteractionEnabled=YES;
+    qrimgView=[CreateQrIMG changeQr:qrstr andnewRect:CGRectMake(0, 0, 240, 240)];
     [bgView addSubview:qrimgView];
-    CGImageRelease(cgImage);
+    
+    
+    
+    
+    
+    
+    
+    
+
     
     
 }
-- (UIImage *)resizeImage:(UIImage *)image withQuality:(CGInterpolationQuality)quality rate:(CGFloat)rate {
-    
-    UIImage *resized = nil;
-    CGFloat width = image.size.width * rate; CGFloat height = image.size.height * rate;
-    UIGraphicsBeginImageContext(CGSizeMake(width, height)); CGContextRef context = UIGraphicsGetCurrentContext(); CGContextSetInterpolationQuality(context, quality); [image drawInRect:CGRectMake(0, 0, width, height)]; resized = UIGraphicsGetImageFromCurrentImageContext(); UIGraphicsEndImageContext();
-    return resized;
-}
+
 - (UIButton*) createButtonWithFrame: (CGRect) frame Target:(id)target Selector:(SEL)selector Image:(NSString *)image
 {
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];

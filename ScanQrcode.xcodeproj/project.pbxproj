@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		601A1B6F1C19523800A07403 /* ScanSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 601A1B6E1C19523800A07403 /* ScanSetting.m */; };
+		601A1B721C198C9C00A07403 /* CreateQrIMG.m in Sources */ = {isa = PBXBuildFile; fileRef = 601A1B711C198C9C00A07403 /* CreateQrIMG.m */; };
 		60B432641C16CDE9000C1F37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B432631C16CDE9000C1F37 /* main.m */; };
 		60B432671C16CDE9000C1F37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B432661C16CDE9000C1F37 /* AppDelegate.m */; };
 		60B4326A1C16CDE9000C1F37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B432691C16CDE9000C1F37 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		601A1B6D1C19523800A07403 /* ScanSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanSetting.h; sourceTree = "<group>"; };
 		601A1B6E1C19523800A07403 /* ScanSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanSetting.m; sourceTree = "<group>"; };
+		601A1B701C198C9C00A07403 /* CreateQrIMG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateQrIMG.h; sourceTree = "<group>"; };
+		601A1B711C198C9C00A07403 /* CreateQrIMG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateQrIMG.m; sourceTree = "<group>"; };
 		60B4325F1C16CDE9000C1F37 /* ScanQrcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanQrcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B432631C16CDE9000C1F37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60B432651C16CDE9000C1F37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				60B4327F1C16E394000C1F37 /* ScanQrViewController.m */,
 				60B4327B1C16D2B9000C1F37 /* CreateQrViewController.h */,
 				60B4327C1C16D2B9000C1F37 /* CreateQrViewController.m */,
+				601A1B701C198C9C00A07403 /* CreateQrIMG.h */,
+				601A1B711C198C9C00A07403 /* CreateQrIMG.m */,
 				60B4326B1C16CDE9000C1F37 /* Main.storyboard */,
 				60B4326E1C16CDE9000C1F37 /* Assets.xcassets */,
 				60B432701C16CDE9000C1F37 /* LaunchScreen.storyboard */,
@@ -177,6 +182,7 @@
 				601A1B6F1C19523800A07403 /* ScanSetting.m in Sources */,
 				60B432801C16E394000C1F37 /* ScanQrViewController.m in Sources */,
 				60B4327D1C16D2B9000C1F37 /* CreateQrViewController.m in Sources */,
+				601A1B721C198C9C00A07403 /* CreateQrIMG.m in Sources */,
 				60B432671C16CDE9000C1F37 /* AppDelegate.m in Sources */,
 				60B432831C16E894000C1F37 /* QrCustomView.m in Sources */,
 				60B432641C16CDE9000C1F37 /* main.m in Sources */,
