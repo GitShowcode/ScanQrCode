@@ -10,8 +10,8 @@ CreateQrIMG *IMG=[CreateQrIMG changeQr:@"这是一个二维码" andnewRect:CGRec
 
 Demo
 
-![image](https://github.com/GitShowcode/ScanQrCode.git/master/screenshots/IMG_1534.PNG)
-![image](https://github.com/GitShowcode/ScanQrCode.git/master/screenshots/IMG_1535.PNG)
+![image](https://github.com/GitShowcode/ScanQrCode/blob/master/screenshots/IMG_1534.PNG)
+![image](https://github.com/GitShowcode/ScanQrCode/blob/master/screenshots/IMG_1535.PNG)
 
 
 
