@@ -82,7 +82,7 @@
 
         CGRect rect = CGRectMake(SCREEN_WIDTH/2-mywidth/2.0,(SCREEN_HEIGHT-mywidth+64)/2.0-[ScanSetting getsetting].space , mywidth, mywidth);
         CGRect intertRect = [layer metadataOutputRectOfInterestForRect:rect];
-        CGRect layerRect = [layer rectForMetadataOutputRectOfInterest:intertRect];
+      //  CGRect layerRect = [layer rectForMetadataOutputRectOfInterest:intertRect];
         
         
       //  NSLog(@"%@,  %@",NSStringFromCGRect(intertRect),NSStringFromCGRect(layerRect));
